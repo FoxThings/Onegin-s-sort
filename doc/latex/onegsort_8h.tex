@@ -1,0 +1,104 @@
+\hypertarget{onegsort_8h}{}\doxysection{onegsort.\+h File Reference}
+\label{onegsort_8h}\index{onegsort.h@{onegsort.h}}
+{\ttfamily \#include \char`\"{}text.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{onegsort_8h_a893fbed0767f861a6838b24387db3a37}{direct\+Str\+Cmp}} (const \mbox{\hyperlink{structstring}{string}} $\ast$x1, const \mbox{\hyperlink{structstring}{string}} $\ast$x2)
+\item 
+int \mbox{\hyperlink{onegsort_8h_aecce20d04afb65307366bb463b9eb105}{inverse\+Str\+Cmp}} (const \mbox{\hyperlink{structstring}{string}} $\ast$x1, const \mbox{\hyperlink{structstring}{string}} $\ast$x2)
+\item 
+void \mbox{\hyperlink{onegsort_8h_adee3145c1c8d6b93121a0a17b89936fe}{string\+Sort}} (\mbox{\hyperlink{structstring}{string}} $\ast$vector, int count, int($\ast$cmp)(const void $\ast$, const void $\ast$))
+\item 
+void \mbox{\hyperlink{onegsort_8h_a68d8d48850d4b15af182fb3f6d46e7c9}{onegin\+Sort}} (const char $\ast$in, const char $\ast$out)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{onegsort_8h_a893fbed0767f861a6838b24387db3a37}\label{onegsort_8h_a893fbed0767f861a6838b24387db3a37}} 
+\index{onegsort.h@{onegsort.h}!directStrCmp@{directStrCmp}}
+\index{directStrCmp@{directStrCmp}!onegsort.h@{onegsort.h}}
+\doxysubsubsection{\texorpdfstring{directStrCmp()}{directStrCmp()}}
+{\footnotesize\ttfamily int direct\+Str\+Cmp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstring}{string}} $\ast$}]{x1,  }\item[{const \mbox{\hyperlink{structstring}{string}} $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+Compare strings directly 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x1} & first string pointer \\
+\hline
+\mbox{\texttt{ in}}  & {\em x2} & second string pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if x1 $>$ x2 return $>$0 else if x1 $<$ x2 returns $<$0 else returns 0 
+\end{DoxyReturn}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Authors}
+Zvezdin Nikita 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{onegsort_8h_aecce20d04afb65307366bb463b9eb105}\label{onegsort_8h_aecce20d04afb65307366bb463b9eb105}} 
+\index{onegsort.h@{onegsort.h}!inverseStrCmp@{inverseStrCmp}}
+\index{inverseStrCmp@{inverseStrCmp}!onegsort.h@{onegsort.h}}
+\doxysubsubsection{\texorpdfstring{inverseStrCmp()}{inverseStrCmp()}}
+{\footnotesize\ttfamily int inverse\+Str\+Cmp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstring}{string}} $\ast$}]{x1,  }\item[{const \mbox{\hyperlink{structstring}{string}} $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+Compare strings inverted 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x1} & first string pointer \\
+\hline
+\mbox{\texttt{ in}}  & {\em x2} & second string pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if x1 $>$ x2 return $>$0 else if x1 $<$ x2 returns $<$0 else returns 0 
+\end{DoxyReturn}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Authors}
+Zvezdin Nikita 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{onegsort_8h_a68d8d48850d4b15af182fb3f6d46e7c9}\label{onegsort_8h_a68d8d48850d4b15af182fb3f6d46e7c9}} 
+\index{onegsort.h@{onegsort.h}!oneginSort@{oneginSort}}
+\index{oneginSort@{oneginSort}!onegsort.h@{onegsort.h}}
+\doxysubsubsection{\texorpdfstring{oneginSort()}{oneginSort()}}
+{\footnotesize\ttfamily void onegin\+Sort (\begin{DoxyParamCaption}\item[{const char $\ast$}]{in,  }\item[{const char $\ast$}]{out }\end{DoxyParamCaption})}
+
+Onegin sort 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in} & input file name \\
+\hline
+\mbox{\texttt{ in}}  & {\em out} & output file name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Authors}
+Zvezdin Nikita 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Use only A\+N\+SI txt file 
+\end{DoxyWarning}
+\mbox{\Hypertarget{onegsort_8h_adee3145c1c8d6b93121a0a17b89936fe}\label{onegsort_8h_adee3145c1c8d6b93121a0a17b89936fe}} 
+\index{onegsort.h@{onegsort.h}!stringSort@{stringSort}}
+\index{stringSort@{stringSort}!onegsort.h@{onegsort.h}}
+\doxysubsubsection{\texorpdfstring{stringSort()}{stringSort()}}
+{\footnotesize\ttfamily void string\+Sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstring}{string}} $\ast$}]{vector,  }\item[{int}]{count,  }\item[{int($\ast$)(const void $\ast$, const void $\ast$)}]{cmp }\end{DoxyParamCaption})}
+
+Sorting string data 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em vector} & collection of string data \\
+\hline
+\mbox{\texttt{ in}}  & {\em count} & number of strings \\
+\hline
+\mbox{\texttt{ in}}  & {\em cmp} & pointer to cmp func\\
+\hline
+\end{DoxyParams}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Authors}
+Zvezdin Nikita 
+\end{DoxyAuthor}

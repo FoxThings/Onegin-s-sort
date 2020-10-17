@@ -1,0 +1,154 @@
+\hypertarget{text_8h}{}\doxysection{text.\+h File Reference}
+\label{text_8h}\index{text.h@{text.h}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structstring}{string}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{text_8h_a63e2e3ee7db5274c6a3929edfc07c6c9}\label{text_8h_a63e2e3ee7db5274c6a3929edfc07c6c9}} 
+typedef struct \mbox{\hyperlink{structstring}{string}} {\bfseries string}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{text_8h_a6a6011ffa7c1f03374cb597ab6a83639}{input}} (const char $\ast$name, char $\ast$$\ast$buffer)
+\item 
+int \mbox{\hyperlink{text_8h_a515abb31b2048a95780989710e00301a}{output}} (const char $\ast$name, \mbox{\hyperlink{structstring}{string}} $\ast$text, int count)
+\item 
+int \mbox{\hyperlink{text_8h_adee62182ec327e9be2e50d069d139e47}{native\+Output}} (const char $\ast$name, const char $\ast$\mbox{\hyperlink{structstring}{string}})
+\item 
+int \mbox{\hyperlink{text_8h_aca75cfc6e33146623f336b9d72375f34}{clear\+File}} (const char $\ast$name)
+\item 
+\mbox{\hyperlink{structstring}{string}} $\ast$ \mbox{\hyperlink{text_8h_a5a8f32ec9d64e8568f80888d064b7eb5}{buffer\+Parse}} (char $\ast$buffer, int $\ast$count, char symbol)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{text_8h_a5a8f32ec9d64e8568f80888d064b7eb5}\label{text_8h_a5a8f32ec9d64e8568f80888d064b7eb5}} 
+\index{text.h@{text.h}!bufferParse@{bufferParse}}
+\index{bufferParse@{bufferParse}!text.h@{text.h}}
+\doxysubsubsection{\texorpdfstring{bufferParse()}{bufferParse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structstring}{string}}$\ast$ buffer\+Parse (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer,  }\item[{int $\ast$}]{count,  }\item[{char}]{symbol }\end{DoxyParamCaption})}
+
+Parse the buffer to string data 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em buffer} & pointer to buffer \\
+\hline
+\mbox{\texttt{ out}}  & {\em count} & number of strings \\
+\hline
+\mbox{\texttt{ in}}  & {\em symbol} & separator\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+parsed buffer (string data) 
+\end{DoxyReturn}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Authors}
+Zvezdin Nikita 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{text_8h_aca75cfc6e33146623f336b9d72375f34}\label{text_8h_aca75cfc6e33146623f336b9d72375f34}} 
+\index{text.h@{text.h}!clearFile@{clearFile}}
+\index{clearFile@{clearFile}!text.h@{text.h}}
+\doxysubsubsection{\texorpdfstring{clearFile()}{clearFile()}}
+{\footnotesize\ttfamily int clear\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+Clear the file 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & the name of file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if file opened 
+\end{DoxyReturn}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Authors}
+Zvezdin Nikita 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Use only A\+N\+SI txt file 
+\end{DoxyWarning}
+\mbox{\Hypertarget{text_8h_a6a6011ffa7c1f03374cb597ab6a83639}\label{text_8h_a6a6011ffa7c1f03374cb597ab6a83639}} 
+\index{text.h@{text.h}!input@{input}}
+\index{input@{input}!text.h@{text.h}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily int input (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{char $\ast$$\ast$}]{buffer }\end{DoxyParamCaption})}
+
+Input from text file 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & the name of file \\
+\hline
+\mbox{\texttt{ out}}  & {\em buffer} & writing buffer pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if file opened 
+\end{DoxyReturn}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Authors}
+Zvezdin Nikita 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Use only A\+N\+SI txt file 
+\end{DoxyWarning}
+\mbox{\Hypertarget{text_8h_adee62182ec327e9be2e50d069d139e47}\label{text_8h_adee62182ec327e9be2e50d069d139e47}} 
+\index{text.h@{text.h}!nativeOutput@{nativeOutput}}
+\index{nativeOutput@{nativeOutput}!text.h@{text.h}}
+\doxysubsubsection{\texorpdfstring{nativeOutput()}{nativeOutput()}}
+{\footnotesize\ttfamily int native\+Output (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{string }\end{DoxyParamCaption})}
+
+Output for c-\/strings 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & the name of file \\
+\hline
+\mbox{\texttt{ in}}  & {\em string} & c-\/string pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if file opened 
+\end{DoxyReturn}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Authors}
+Zvezdin Nikita 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Use only A\+N\+SI txt file 
+\end{DoxyWarning}
+\mbox{\Hypertarget{text_8h_a515abb31b2048a95780989710e00301a}\label{text_8h_a515abb31b2048a95780989710e00301a}} 
+\index{text.h@{text.h}!output@{output}}
+\index{output@{output}!text.h@{text.h}}
+\doxysubsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily int output (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{structstring}{string}} $\ast$}]{text,  }\item[{int}]{count }\end{DoxyParamCaption})}
+
+Output for data of string 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & the name of file \\
+\hline
+\mbox{\texttt{ in}}  & {\em text} & string data pointer \\
+\hline
+\mbox{\texttt{ in}}  & {\em count} & number of strings\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if file opened 
+\end{DoxyReturn}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Authors}
+Zvezdin Nikita 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Use only A\+N\+SI txt file 
+\end{DoxyWarning}
