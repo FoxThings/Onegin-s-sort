@@ -22,13 +22,13 @@ int oneginSort(const char* in, const char* out)
     RUN_CHECK(clearFile(out), FILE_OK);
 
     int count;
-    string* text = bufferParse(buffer, &count, '\n');
+    fileString* text = bufferParse(buffer, &count, '\n');
     if (text == NULL) return NO_MEMORY;
 
     stringSort(text, count, (int(*) (const void *, const void *))directStrCmp);
     RUN_CHECK(output(out, text, count), FILE_OK);
 
-    qsort(text, count, sizeof(string), (int(*) (const void *, const void *))inverseStrCmp);
+    qsort(text, count, sizeof(fileString), (int(*) (const void *, const void *))inverseStrCmp);
     RUN_CHECK(output(out, text, count), FILE_OK);
 
     RUN_CHECK(nativeOutput(out, buffer), FILE_OK);

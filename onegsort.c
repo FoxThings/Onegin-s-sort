@@ -6,7 +6,7 @@
 
 const char* SKIP_SYMBOLS = "!?.,;:-_\"'«»() ";
 
-int directStrCmp(const string* x1, const string* x2)
+int directStrCmp(const fileString* x1, const fileString* x2)
 {
     assert(x1 != NULL);
     assert(x2 != NULL);
@@ -33,13 +33,13 @@ int directStrCmp(const string* x1, const string* x2)
     return (unsigned char)*s1 - (unsigned char)*s2;
 }
 
-int inverseStrCmp(const string* x1, const string* x2)
+int inverseStrCmp(const fileString* x1, const fileString* x2)
 {
    assert(x1 != NULL);
    assert(x2 != NULL);
 
-    string s1 = *x1;
-    string s2 = *x2;
+    fileString s1 = *x1;
+    fileString s2 = *x2;
 
     s1.p += s1.length - 1;
     s2.p += s2.length - 1;
@@ -63,7 +63,7 @@ int inverseStrCmp(const string* x1, const string* x2)
     return (unsigned char)*(s1.p) - (unsigned char)*(s2.p);
 }
 
-void stringSort(string* vector, int count, int (*cmp)(const void*, const void*))
+void stringSort(fileString* vector, int count, int (*cmp)(const void*, const void*))
 {
     assert(vector != NULL);
     assert(count > 0);
@@ -73,7 +73,7 @@ void stringSort(string* vector, int count, int (*cmp)(const void*, const void*))
         {
             if (cmp(vector + i, vector + j) > 0)
             {
-                string temp = vector[i];
+                fileString temp = vector[i];
                 vector[i] = vector[j];
                 vector[j] = temp;
             }

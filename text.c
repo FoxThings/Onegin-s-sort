@@ -34,7 +34,7 @@ int input(const char* name, char** buffer)
     return FILE_OK;
 }
 
-int output(const char* name, string* text, int count)
+int output(const char* name, fileString* text, int count)
 {
     assert(name != NULL);
     assert(text != NULL);
@@ -62,10 +62,10 @@ int output(const char* name, string* text, int count)
     return FILE_OK;
 }
 
-int nativeOutput(const char* name, const char* string)
+int nativeOutput(const char* name, const char* str)
 {
     assert(name != NULL);
-    assert(string != NULL);
+    assert(str != NULL);
 
     FILE* fout;
     if ((fout = fopen(name, "a")) == NULL)
@@ -73,7 +73,7 @@ int nativeOutput(const char* name, const char* string)
         return CANNOT_OPEN_FILE;
     }
 
-    fprintf(fout, string);
+    fprintf(fout, str);
 
     fclose(fout);
     return FILE_OK;
@@ -92,7 +92,7 @@ int clearFile(const char* name)
     return FILE_OK;
 }
 
-string* bufferParse(char* buffer, int* count, char symbol)
+fileString* bufferParse(char* buffer, int* count, char symbol)
 {
     assert(buffer != NULL);
     assert(count != NULL);
@@ -107,7 +107,7 @@ string* bufferParse(char* buffer, int* count, char symbol)
          ++(*count);
     }
 
-    string* text = (string*) calloc(*count, sizeof(string));
+    fileString* text = (fileString*) calloc(*count, sizeof(fileString));
     if (text == NULL)
         return NULL;
 
