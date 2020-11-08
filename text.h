@@ -11,12 +11,19 @@ struct string
     size_t length;
 };
 
+enum file_codes {
+                    FILE_OK = 0,
+                    CANNOT_OPEN_FILE,
+                    NO_MEMORY,
+                    CANNOT_READ_FILE
+                };
+
 /*!
     Input from text file
     @param[in] name the name of file
     @param[out] buffer writing buffer pointer
 
-    @return 0 if file opened
+    @return execute code
     @version 1.0
     @authors Zvezdin Nikita
     @warning Use only ANSI txt file
@@ -29,7 +36,7 @@ int input(const char* name, char** buffer);
     @param[in] text string data pointer
     @param[in] count number of strings
 
-    @return 0 if file opened
+    @return execute code
     @version 1.0
     @authors Zvezdin Nikita
     @warning Use only ANSI txt file
@@ -41,7 +48,7 @@ int output(const char* name, string* text, int count);
     @param[in] name the name of file
     @param[in] string c-string pointer
 
-    @return 0 if file opened
+    @return execute code
     @version 1.0
     @authors Zvezdin Nikita
     @warning Use only ANSI txt file
@@ -52,7 +59,7 @@ int nativeOutput(const char* name, const char* string);
     Clear the file
     @param[in] name the name of file
 
-    @return 0 if file opened
+    @return execute code
     @version 1.0
     @authors Zvezdin Nikita
     @warning Use only ANSI txt file

@@ -37,15 +37,4 @@ int inverseStrCmp(const string* x1, const string* x2);
 */
 void stringSort(string* vector, int count, int (*cmp)(const void*, const void*));
 
-/*!
-    Onegin sort
-    @param[in] in input file name
-    @param[in] out output file name
-
-    @version 1.0
-    @authors Zvezdin Nikita
-    @warning Use only ANSI txt file
-*/
-void oneginSort(const char* in, const char* out);
-
 #endif // ONEGSORT_H_INCLUDED

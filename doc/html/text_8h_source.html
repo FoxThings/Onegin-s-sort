@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Onegin&#39;s sort: text.h Source File</title>
+<title>My Project: text.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Onegin&#39;s sort
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -77,24 +77,31 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">size_t</span> length;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">int</span> <a class="code" href="text_8h.html#a6a6011ffa7c1f03374cb597ab6a83639">input</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keywordtype">char</span>** buffer);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">int</span> <a class="code" href="text_8h.html#a515abb31b2048a95780989710e00301a">output</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keywordtype">string</span>* text, <span class="keywordtype">int</span> count);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">int</span> <a class="code" href="text_8h.html#adee62182ec327e9be2e50d069d139e47">nativeOutput</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keywordtype">string</span>);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">int</span> <a class="code" href="text_8h.html#aca75cfc6e33146623f336b9d72375f34">clearFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">string</span>* <a class="code" href="text_8h.html#a5a8f32ec9d64e8568f80888d064b7eb5">bufferParse</a>(<span class="keywordtype">char</span>* buffer, <span class="keywordtype">int</span>* count, <span class="keywordtype">char</span> symbol);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif // TEXT_H_INCLUDED</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">enum</span> file_codes {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                    FILE_OK = 0,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                    CANNOT_OPEN_FILE,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                    NO_MEMORY,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                    CANNOT_READ_FILE</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                };</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">int</span> <a class="code" href="text_8h.html#a6a6011ffa7c1f03374cb597ab6a83639">input</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keywordtype">char</span>** buffer);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">int</span> <a class="code" href="text_8h.html#a515abb31b2048a95780989710e00301a">output</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keywordtype">string</span>* text, <span class="keywordtype">int</span> count);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">int</span> <a class="code" href="text_8h.html#adee62182ec327e9be2e50d069d139e47">nativeOutput</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">int</span> <a class="code" href="text_8h.html#aca75cfc6e33146623f336b9d72375f34">clearFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">string</span>* <a class="code" href="text_8h.html#a5a8f32ec9d64e8568f80888d064b7eb5">bufferParse</a>(<span class="keywordtype">char</span>* buffer, <span class="keywordtype">int</span>* count, <span class="keywordtype">char</span> symbol);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif // TEXT_H_INCLUDED</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="atext_8h_html_a5a8f32ec9d64e8568f80888d064b7eb5"><div class="ttname"><a href="text_8h.html#a5a8f32ec9d64e8568f80888d064b7eb5">bufferParse</a></div><div class="ttdeci">string * bufferParse(char *buffer, int *count, char symbol)</div><div class="ttdef"><b>Definition:</b> text.c:94</div></div>
-<div class="ttc" id="atext_8h_html_aca75cfc6e33146623f336b9d72375f34"><div class="ttname"><a href="text_8h.html#aca75cfc6e33146623f336b9d72375f34">clearFile</a></div><div class="ttdeci">int clearFile(const char *name)</div><div class="ttdef"><b>Definition:</b> text.c:81</div></div>
+<div class="ttc" id="atext_8h_html_a5a8f32ec9d64e8568f80888d064b7eb5"><div class="ttname"><a href="text_8h.html#a5a8f32ec9d64e8568f80888d064b7eb5">bufferParse</a></div><div class="ttdeci">string * bufferParse(char *buffer, int *count, char symbol)</div><div class="ttdef"><b>Definition:</b> text.c:95</div></div>
+<div class="ttc" id="atext_8h_html_aca75cfc6e33146623f336b9d72375f34"><div class="ttname"><a href="text_8h.html#aca75cfc6e33146623f336b9d72375f34">clearFile</a></div><div class="ttdeci">int clearFile(const char *name)</div><div class="ttdef"><b>Definition:</b> text.c:82</div></div>
 <div class="ttc" id="astructstring_html"><div class="ttname"><a href="structstring.html">string</a></div><div class="ttdef"><b>Definition:</b> text.h:9</div></div>
 <div class="ttc" id="atext_8h_html_a6a6011ffa7c1f03374cb597ab6a83639"><div class="ttname"><a href="text_8h.html#a6a6011ffa7c1f03374cb597ab6a83639">input</a></div><div class="ttdeci">int input(const char *name, char **buffer)</div><div class="ttdef"><b>Definition:</b> text.c:8</div></div>
-<div class="ttc" id="atext_8h_html_adee62182ec327e9be2e50d069d139e47"><div class="ttname"><a href="text_8h.html#adee62182ec327e9be2e50d069d139e47">nativeOutput</a></div><div class="ttdeci">int nativeOutput(const char *name, const char *string)</div><div class="ttdef"><b>Definition:</b> text.c:64</div></div>
-<div class="ttc" id="atext_8h_html_a515abb31b2048a95780989710e00301a"><div class="ttname"><a href="text_8h.html#a515abb31b2048a95780989710e00301a">output</a></div><div class="ttdeci">int output(const char *name, string *text, int count)</div><div class="ttdef"><b>Definition:</b> text.c:36</div></div>
+<div class="ttc" id="atext_8h_html_adee62182ec327e9be2e50d069d139e47"><div class="ttname"><a href="text_8h.html#adee62182ec327e9be2e50d069d139e47">nativeOutput</a></div><div class="ttdeci">int nativeOutput(const char *name, const char *string)</div><div class="ttdef"><b>Definition:</b> text.c:65</div></div>
+<div class="ttc" id="atext_8h_html_a515abb31b2048a95780989710e00301a"><div class="ttname"><a href="text_8h.html#a515abb31b2048a95780989710e00301a">output</a></div><div class="ttdeci">int output(const char *name, string *text, int count)</div><div class="ttdef"><b>Definition:</b> text.c:37</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

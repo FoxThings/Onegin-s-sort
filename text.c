@@ -11,26 +11,27 @@ int input(const char* name, char** buffer)
     assert(buffer != NULL);
 
     FILE* fin;
-    size_t size;
     if ((fin = fopen(name, "r")) == NULL)
     {
-        return -1;
+        return CANNOT_OPEN_FILE;
     }
 
     struct stat info;
-    stat(name, &info);
+    if(stat(name, &info)) return CANNOT_OPEN_FILE;
 
     *buffer = (char*) calloc(info.st_size + 2, sizeof(char));
-    assert(buffer != NULL);
+    if (buffer == NULL)
+        return NO_MEMORY;
 
-    size = fread(*buffer, sizeof(char), info.st_size, fin);
-    assert(size > 0);
+    size_t size = fread(*buffer, sizeof(char), info.st_size, fin);
+    if (size < 0)
+        return CANNOT_READ_FILE;
 
     *(*buffer + size) = '\n';
     *(*buffer + size + 1) = '\0';
 
     fclose(fin);
-    return 0;
+    return FILE_OK;
 }
 
 int output(const char* name, string* text, int count)
@@ -42,7 +43,7 @@ int output(const char* name, string* text, int count)
     FILE* fout;
     if ((fout = fopen(name, "a")) == NULL)
     {
-        return -1;
+        return CANNOT_OPEN_FILE;
     }
 
     for (int i = 0; i < count; ++i)
@@ -58,7 +59,7 @@ int output(const char* name, string* text, int count)
 
     fputc('\n', fout);
     fclose(fout);
-    return 0;
+    return FILE_OK;
 }
 
 int nativeOutput(const char* name, const char* string)
@@ -69,13 +70,13 @@ int nativeOutput(const char* name, const char* string)
     FILE* fout;
     if ((fout = fopen(name, "a")) == NULL)
     {
-        return -1;
+        return CANNOT_OPEN_FILE;
     }
 
     fprintf(fout, string);
 
     fclose(fout);
-    return 0;
+    return FILE_OK;
 }
 
 int clearFile(const char* name)
@@ -85,10 +86,10 @@ int clearFile(const char* name)
     FILE* fout;
     if ((fout = fopen(name, "w")) == NULL)
     {
-        return -1;
+        return CANNOT_OPEN_FILE;
     }
     fclose(fout);
-    return 0;
+    return FILE_OK;
 }
 
 string* bufferParse(char* buffer, int* count, char symbol)
@@ -107,7 +108,8 @@ string* bufferParse(char* buffer, int* count, char symbol)
     }
 
     string* text = (string*) calloc(*count, sizeof(string));
-    assert(text != NULL);
+    if (text == NULL)
+        return NULL;
 
     p = buffer;
     char* last;
